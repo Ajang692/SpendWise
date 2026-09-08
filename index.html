@@ -9,25 +9,71 @@
 <body>
 
     <h1>My Budget Tracker</h1>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+     alt="Budget tracker icon"
+     width="80">
     <p>Track your income and expenses in one place.</p>
 
-    <section>
+    <section class="add-expense">
     <h2>Add Expense</h2>
 
-    <label>Expense Name:</label>
-    <input type="text">
+    <form>
+        <label for="expense-name">Expense Name:</label>
+        <input type="text" id="expense-name" name="expense-name">
 
-    <label>Amount:</label>
-    <input type="number">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount">
 
-    <label>Category:</label>
-    <input type="text">
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="shopping">Shopping</option>
+            <option value="bills">Bills</option>
+            <option value="entertainment">Entertainment</option>
+        </select>
+
+        <button type="submit">Add Expense</button>
+    </form>
 </section>
 
-<section>
+<section class="your-expense">
     <h2>Your Expenses</h2>
-    <p>No expenses yet.</p>
+    <table>
+    <thead>
+        <tr>
+            <th>Expense Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Lunch</td>
+            <td>500</td>
+            <td>Food</td>
+        </tr>
+        <tr>
+            <td>Bus Fare</td>
+            <td>100</td>
+            <td>Transport</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Budgeting Tips</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-bqeNE1DOzA?si=noF33P-HU_hyeVxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<details>
+    <summary>How to use this tracker</summary>
+    <p>Enter the expense name, amount, and category, then click the Add Expense button to record your expense.</p>
+</details>
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
